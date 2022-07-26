@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+
+        function show() {
+            document.getElementById('info_contain').style.visibility = 'visible';
+            document.getElementById('header_btn').style.visibility = 'hidden';
+        }
+
+        $('.header_btn').on('click', function (event) {
+            $(this).toggleClass('start-fun');
+            let $header = $('#header');
+            $header.toggleClass('color-bg-start')
+                .toggleClass('bg-animate-color');
+
+            $(this).hasClass('start-fun') ?
+                $(this).text('stop the fun') :
+                $(this).text('start the fun');
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div id="main_cont">
+        <div id='header'>
+            <button class="header_btn" onclick="show()">결과 보기</button>
+        </div>
+        <div id="info-wrapper">
+            <div id="info_contain">
+                <div id='info_header'>
+                    <p class="info-name">NAME : {{info_name}}</p>
+                    <p class="info-type">TYPE : {{type}}</p>
+                </div>
+                <div id="img_wrapper">
+                    <div id="img_search">
+                        <img src="data:image/jpeg;base64, {{post_img}}">
+                        <p>내 이미지</p>
+                    </div>
+                    <div id="img_result">
+                        <img src="data:image/jpeg;base64, {{info_img}}">
+                        <p>결과</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id=footer_wrapper>
+            <p><a href="/"> 처음으로 </a></p>
+            <p><a href="main"> 다른 포켓몬 분석 </a></p>
+            <p><a href=""> 인스타에 포스팅 </a></p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

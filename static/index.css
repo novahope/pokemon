@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'DungGeunMo';
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-image: url("./img/pika.png");
+    background-size: 400px;
+    background-color: white;
+
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#main {
+    width: 720px;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("../static/img/book.png");
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+#main #main-wrapper1 {
+
+    padding-left: 85px;
+    padding-bottom: 65px;
+
+}
+
+#main #main-wrapper1 input {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #cd2626;
+}
+
+
+#main #main-wrapper1 #img-wrapper {
+    width: 175px;
+    height: 125px;
+    overflow: hidden;
+    border-radius: 5%;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    transform: skew(-5deg);
+    margin-left: 30px;
+}
+
+#main #main-wrapper1 #img-wrapper #blah {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#main #main-wrapper2 {
+    width: 100%;
+    margin-top: 80px;
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 130px;
+    -webkit-transform: skew(-18deg);
+    -moz-transform: skew(-18deg);
+    transform: skew(-3deg);
+
+}
+
+#main #main-wrapper2 #user_name {
+    background-color: #1c1c1c;
+    width: 215px;
+    height: 68px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.3em;
+    color: #696969;
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 13px;
+    margin-right: 80px;
+}
+
+#main #main-wrapper2 #upload {
+    float: left;
+    width: 215px;
+    height: 70px;
+    background-color: #5cacee;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px black;
+    transition-duration: 0.3s;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
